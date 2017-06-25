@@ -5,7 +5,7 @@
 # Site
 title: Lazy Chill
 subtitle: Don't be Lazy
-description:
+description: "前端","JS","Java"
 author: Chill
 language: zh-Hans
 timezone:
@@ -64,7 +64,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-theme: next
+theme: hexo-theme-next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
