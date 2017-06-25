@@ -5,7 +5,7 @@
 # Site
 title: Lazy Chill
 subtitle: Don't be Lazy
-description: "前端,JS,Java"
+description: "虽然好懒，但还是要尽力加油哦"
 author: Chill
 language: zh-Hans
 timezone:
@@ -46,6 +46,12 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  工具: tools
+  前端: front-end
+  后端: back-end
+  杂谈: talk
+  生活: life
+
 tag_map:
 
 # Date / Time format

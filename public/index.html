@@ -368,8 +368,8 @@
 <li>查看远程库信息：<code>git remote -v</code></li>
 <li>抓取远程的提交：<code>git pull</code></li>
 </ul>
-<img src="/2017/06/25/how-to-use-git/sequnce.png" alt="This is an example image" title="This is an example image">
-<h3 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h3><ul>
+<h3 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h3><img src="/2017/06/25/how-to-use-git/sequnce.png" alt="理解分支" title="理解分支">
+<ul>
 <li>创建分支<code>git branch &lt;branch_name&gt;</code></li>
 <li>切换分支<code>git checkout &lt;branch_name&gt;</code></li>
 <li>创建并切换分支<code>git checkout -b &lt;branch_name&gt;</code></li>
@@ -401,8 +401,8 @@
 <li>未添加到暂存区为<code>not staged</code></li>
 <li>add后为<code>staged</code></li>
 </ol>
-<p>本地修改后add到暂存区，使用<code>git add &lt;file&gt;</code>加入暂存区</p>
-<p>暂存区commit到开发分支，使用<code>git commit -m &quot;commit message&quot;</code>进行提交</p>
+<p>本地修改后add到暂存区，使用<code>git add &lt;file&gt;</code>加入暂存区<br><img src="/2017/06/25/how-to-use-git/step1.png" alt="从本地到暂存" title="从本地到暂存"></p>
+<p>暂存区commit到开发分支，使用<code>git commit -m &quot;commit message&quot;</code>进行提交<br><img src="/2017/06/25/how-to-use-git/step2.png" alt="从暂存到分支" title="从暂存到分支"></p>
 <h3 id="各个区的后悔药"><a href="#各个区的后悔药" class="headerlink" title="各个区的后悔药"></a>各个区的后悔药</h3><ol>
 <li>如果只是在工作区修改，并未add，那么可以使用<code>git checkout -- &lt;file&gt;</code>来丢弃掉操作</li>
 <li>如果已经<code>add</code>到暂存区，希望还原到工作区可以使用<code>git reset HEAD &lt;file&gt;</code>。其中HEAD表示本地指针。</li>
@@ -636,7 +636,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

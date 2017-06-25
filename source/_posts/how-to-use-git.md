@@ -1,8 +1,8 @@
 ---
 title: GIT简明使用指北
 date: 2017-06-25 17:20:02
-tags: 工具
-categories: 技术
+categories: 工具
+tags: git
 ---
 
 ### 常用的基本操作命令
