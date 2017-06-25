@@ -93,15 +93,15 @@
 
 
 
-<meta name="description" content="前端,JS,Java">
+<meta name="description" content="虽然好懒，但还是要尽力加油哦">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lazy Chill">
 <meta property="og:url" content="http://plutochill.github.io/index.html">
 <meta property="og:site_name" content="Lazy Chill">
-<meta property="og:description" content="前端,JS,Java">
+<meta property="og:description" content="虽然好懒，但还是要尽力加油哦">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lazy Chill">
-<meta name="twitter:description" content="前端,JS,Java">
+<meta name="twitter:description" content="虽然好懒，但还是要尽力加油哦">
 
 
 
@@ -320,8 +320,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -409,132 +409,27 @@
 <li>如果已经<code>commit</code>到分支上，希望撤销这次提交，可以使用<code>git revert &lt;commit_id&gt;</code>来移除某次commit</li>
 <li>如果已经<code>commit</code>到分支上并且暂存区干净，可以使用<code>git reset HEAD~或者&lt;commit_id&gt;</code>命令将本地指针HEAD指向某次commit，将其还原到工作区上。加上<code>--hard</code>表示强制移动指针同时销毁这次commit_id之后的所有操作，本地修改也会被销毁，是比较危险的操作。</li>
 </ol>
-<h3 id="各个区的后悔药-1"><a href="#各个区的后悔药-1" class="headerlink" title="各个区的后悔药"></a>各个区的后悔药</h3><ol>
-<li>如果只是在工作区修改，并未add，那么可以使用<code>git checkout -- &lt;file&gt;</code>来丢弃掉操作</li>
-<li>如果已经<code>add</code>到暂存区，希望还原到工作区可以使用<code>git reset HEAD &lt;file&gt;</code>。其中HEAD表示本地指针。</li>
-<li>如果已经<code>commit</code>到分支上，希望撤销这次提交，可以使用<code>git revert &lt;commit_id&gt;</code>来移除某次commit</li>
-<li>如果已经<code>commit</code>到分支上并且暂存区干净，可以使用<code>git reset HEAD~或者&lt;commit_id&gt;</code>命令将本地指针HEAD指向某次commit，将其还原到工作区上。加上<code>--hard</code>表示强制移动指针同时销毁这次commit_id之后的所有操作，本地修改也会被销毁，是比较危险的操作。</li>
+<h3 id="一些可能出现的问题"><a href="#一些可能出现的问题" class="headerlink" title="一些可能出现的问题"></a>一些可能出现的问题</h3><blockquote>
+<p>我怎么获取远程的分支信息?</p>
+</blockquote>
+<p>使用<code>git fetch --all</code></p>
+<blockquote>
+<p>获取远程分支信息后使用<code>git branch</code>怎么看不到？</p>
+</blockquote>
+<p>使用<code>git branch -a</code>可以看到所有，使用<code>git branch -r</code>可以看到远程</p>
+<blockquote>
+<p>怎么切换到远程的某个分支？</p>
+</blockquote>
+<p>使用<code>git checkout --track origin/&lt;remote_branch&gt;</code></p>
+<blockquote>
+<p>不小心把本地的node_modules文件上传到了远程，怎么才能删除远程库上的node_modules文件夹？</p>
+</blockquote>
+<ol>
+<li>首先记得把<code>/node_modules/</code>加入到<code>.gitignore</code>当中</li>
+<li><code>git rm -r --cached node_modules</code></li>
+<li><code>git commit -m &#39;Remove the now ignored directory node_modules&#39;</code></li>
+<li><code>git push origin master</code></li>
 </ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://plutochill.github.io/2017/06/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chill">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lazy Chill">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/25/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T16:30:14+08:00">
-                2017-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
           
         
@@ -606,7 +501,7 @@
                alt="Chill" />
           <p class="site-author-name" itemprop="name">Chill</p>
            
-              <p class="site-description motion-element" itemprop="description">前端,JS,Java</p>
+              <p class="site-description motion-element" itemprop="description">虽然好懒，但还是要尽力加油哦</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -614,7 +509,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
