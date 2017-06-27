@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="工具," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -94,7 +94,7 @@
 
 
 <meta name="description" content="常用的基本操作命令 初始化，将目录变为可用git管理的版本库：git init 新建或修改的文件添加到暂存区：git add &amp;lt;file&amp;gt; 暂存区的文件提交到版本库：git commit -m &amp;quot;messages&amp;quot; 本地库的内容推送到远程库：git push origin &amp;lt;branch_name&amp;gt; 关联远程库用：git remote add origi">
-<meta name="keywords" content="工具">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GIT简明使用指北">
 <meta property="og:url" content="http://plutochill.github.io/2017/06/25/how-to-use-git/index.html">
@@ -103,7 +103,7 @@
 <meta property="og:image" content="http://plutochill.github.io/2017/06/25/how-to-use-git/sequnce.png">
 <meta property="og:image" content="http://plutochill.github.io/2017/06/25/how-to-use-git/step1.png">
 <meta property="og:image" content="http://plutochill.github.io/2017/06/25/how-to-use-git/step2.png">
-<meta property="og:updated_time" content="2017-06-25T09:56:42.000Z">
+<meta property="og:updated_time" content="2017-06-25T08:38:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GIT简明使用指北">
 <meta name="twitter:description" content="常用的基本操作命令 初始化，将目录变为可用git管理的版本库：git init 新建或修改的文件添加到暂存区：git add &amp;lt;file&amp;gt; 暂存区的文件提交到版本库：git commit -m &amp;quot;messages&amp;quot; 本地库的内容推送到远程库：git push origin &amp;lt;branch_name&amp;gt; 关联远程库用：git remote add origi">
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -409,11 +409,26 @@
 <li>如果已经<code>commit</code>到分支上，希望撤销这次提交，可以使用<code>git revert &lt;commit_id&gt;</code>来移除某次commit</li>
 <li>如果已经<code>commit</code>到分支上并且暂存区干净，可以使用<code>git reset HEAD~或者&lt;commit_id&gt;</code>命令将本地指针HEAD指向某次commit，将其还原到工作区上。加上<code>--hard</code>表示强制移动指针同时销毁这次commit_id之后的所有操作，本地修改也会被销毁，是比较危险的操作。</li>
 </ol>
-<h3 id="各个区的后悔药-1"><a href="#各个区的后悔药-1" class="headerlink" title="各个区的后悔药"></a>各个区的后悔药</h3><ol>
-<li>如果只是在工作区修改，并未add，那么可以使用<code>git checkout -- &lt;file&gt;</code>来丢弃掉操作</li>
-<li>如果已经<code>add</code>到暂存区，希望还原到工作区可以使用<code>git reset HEAD &lt;file&gt;</code>。其中HEAD表示本地指针。</li>
-<li>如果已经<code>commit</code>到分支上，希望撤销这次提交，可以使用<code>git revert &lt;commit_id&gt;</code>来移除某次commit</li>
-<li>如果已经<code>commit</code>到分支上并且暂存区干净，可以使用<code>git reset HEAD~或者&lt;commit_id&gt;</code>命令将本地指针HEAD指向某次commit，将其还原到工作区上。加上<code>--hard</code>表示强制移动指针同时销毁这次commit_id之后的所有操作，本地修改也会被销毁，是比较危险的操作。</li>
+<h3 id="一些可能出现的问题"><a href="#一些可能出现的问题" class="headerlink" title="一些可能出现的问题"></a>一些可能出现的问题</h3><blockquote>
+<p>我怎么获取远程的分支信息?</p>
+</blockquote>
+<p>使用<code>git fetch --all</code></p>
+<blockquote>
+<p>获取远程分支信息后使用<code>git branch</code>怎么看不到？</p>
+</blockquote>
+<p>使用<code>git branch -a</code>可以看到所有，使用<code>git branch -r</code>可以看到远程</p>
+<blockquote>
+<p>怎么切换到远程的某个分支？</p>
+</blockquote>
+<p>使用<code>git checkout --track origin/&lt;remote_branch&gt;</code></p>
+<blockquote>
+<p>不小心把本地的node_modules文件上传到了远程，怎么才能删除远程库上的node_modules文件夹？</p>
+</blockquote>
+<ol>
+<li>首先记得把<code>/node_modules/</code>加入到<code>.gitignore</code>当中</li>
+<li><code>git rm -r --cached node_modules</code></li>
+<li><code>git commit -m &#39;Remove the now ignored directory node_modules&#39;</code></li>
+<li><code>git push origin master</code></li>
 </ol>
 
       
@@ -444,7 +459,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/工具/" rel="tag"># 工具</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
@@ -457,15 +472,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/27/jnshu-backend-summarize/" rel="prev" title="修真院后端开发从配置到项目结构">
+                修真院后端开发从配置到项目结构 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -529,7 +544,7 @@
                alt="Chill" />
           <p class="site-author-name" itemprop="name">Chill</p>
            
-              <p class="site-description motion-element" itemprop="description">前端,JS,Java</p>
+              <p class="site-description motion-element" itemprop="description">虽然好懒，但还是要尽力加油哦</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -548,7 +563,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -559,7 +574,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -594,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的基本操作命令"><span class="nav-number">1.</span> <span class="nav-text">常用的基本操作命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支的操作"><span class="nav-number">2.</span> <span class="nav-text">分支的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暂存工作现场的操作"><span class="nav-number">3.</span> <span class="nav-text">暂存工作现场的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打标签的操作"><span class="nav-number">4.</span> <span class="nav-text">打标签的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解工作区和暂存区"><span class="nav-number">5.</span> <span class="nav-text">理解工作区和暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各个区的后悔药"><span class="nav-number">6.</span> <span class="nav-text">各个区的后悔药</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各个区的后悔药-1"><span class="nav-number">7.</span> <span class="nav-text">各个区的后悔药</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的基本操作命令"><span class="nav-number">1.</span> <span class="nav-text">常用的基本操作命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支的操作"><span class="nav-number">2.</span> <span class="nav-text">分支的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#暂存工作现场的操作"><span class="nav-number">3.</span> <span class="nav-text">暂存工作现场的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打标签的操作"><span class="nav-number">4.</span> <span class="nav-text">打标签的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解工作区和暂存区"><span class="nav-number">5.</span> <span class="nav-text">理解工作区和暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各个区的后悔药"><span class="nav-number">6.</span> <span class="nav-text">各个区的后悔药</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些可能出现的问题"><span class="nav-number">7.</span> <span class="nav-text">一些可能出现的问题</span></a></li></ol></div>
             
 
           </div>

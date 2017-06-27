@@ -1,6 +1,7 @@
 ---
 title: GIT简明使用指北
 date: 2017-06-25 17:20:02
+updated: 2017-06-25 16:38:02
 categories: 工具
 tags: git
 ---
@@ -72,9 +73,22 @@ tags: git
 4. 如果已经`commit`到分支上并且暂存区干净，可以使用`git reset HEAD~或者<commit_id> `命令将本地指针HEAD指向某次commit，将其还原到工作区上。加上`--hard`表示强制移动指针同时销毁这次commit_id之后的所有操作，本地修改也会被销毁，是比较危险的操作。
 
 
-### 各个区的后悔药
+### 一些可能出现的问题
+> 我怎么获取远程的分支信息?
 
-1. 如果只是在工作区修改，并未add，那么可以使用`git checkout -- <file>`来丢弃掉操作
-2. 如果已经`add`到暂存区，希望还原到工作区可以使用`git reset HEAD <file>`。其中HEAD表示本地指针。
-3. 如果已经`commit`到分支上，希望撤销这次提交，可以使用`git revert <commit_id>`来移除某次commit
-4. 如果已经`commit`到分支上并且暂存区干净，可以使用`git reset HEAD~或者<commit_id> `命令将本地指针HEAD指向某次commit，将其还原到工作区上。加上`--hard`表示强制移动指针同时销毁这次commit_id之后的所有操作，本地修改也会被销毁，是比较危险的操作。
+使用`git fetch --all`
+
+> 获取远程分支信息后使用`git branch`怎么看不到？
+
+使用`git branch -a`可以看到所有，使用`git branch -r`可以看到远程
+
+> 怎么切换到远程的某个分支？
+
+使用`git checkout --track origin/<remote_branch>`
+
+> 不小心把本地的node_modules文件上传到了远程，怎么才能删除远程库上的node_modules文件夹？
+
+1. 首先记得把`/node_modules/`加入到`.gitignore`当中
+2. `git rm -r --cached node_modules`
+3. `git commit -m 'Remove the now ignored directory node_modules'`
+4. `git push origin master`
